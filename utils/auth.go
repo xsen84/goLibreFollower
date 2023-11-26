@@ -17,7 +17,7 @@ type Body struct {
 func Auth(user string, password string, region string) (string, error) {
 
 	client := &http.Client{}
-	client.Timeout = 5 * time.Second
+	client.Timeout = 10 * time.Second
 	posturl := "https://api-" + region + ".libreview.io/llu/auth/login"
 
 	body := Body{

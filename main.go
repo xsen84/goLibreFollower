@@ -35,7 +35,7 @@ func main() {
 	lcfg = readSettings(a, configurationFile)
 
 	a := app.New()
-	w := a.NewWindow("goLibreFollower")
+	w := a.NewWindow("goLibreFollower " + config.Version)
 	a.Settings().SetTheme(theme.DarkTheme())
 	a.SetIcon(config.AppIcon)
 

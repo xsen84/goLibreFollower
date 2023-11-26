@@ -9,7 +9,7 @@ import (
 
 func GetReadings(authToken string) (string, error) {
 	client := &http.Client{}
-	client.Timeout = 5 * time.Second
+	client.Timeout = 10 * time.Second
 
 	getUrl := "https://api-de.libreview.io/llu/connections"
 

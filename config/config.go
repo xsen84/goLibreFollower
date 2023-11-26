@@ -6,6 +6,7 @@ import (
 	"fyne.io/fyne"
 )
 
+const Version = "1.0.0"
 const LowGlucose = 70
 const HighGlucose = 180
 const TimeoutInterval = 25 // after how many RefreshIntervals should we time out
