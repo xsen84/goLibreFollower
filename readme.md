@@ -4,7 +4,7 @@
 </p>
 
 - the app is meant ro be run on Windows or MacOS.
-- it periodically retrieves glucose readings from the LibreLinkUp servers using a Follower account.
+- it periodically retrieves glucose readings from the LibreLinkUp servers using a Follower account for Libre 3
 
 # Pre Requirements
 - windows or mac computer
