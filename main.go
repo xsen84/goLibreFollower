@@ -26,6 +26,10 @@ var settingsWindowOn bool
 var a fyne.App
 
 func main() {
+	a := app.New()
+	w := a.NewWindow("goLibreFollower " + config.Version)
+	a.Settings().SetTheme(theme.DarkTheme())
+	a.SetIcon(config.AppIcon)
 
 	// define path to configuration file
 	homeDir, _ := os.UserHomeDir()
@@ -33,11 +37,6 @@ func main() {
 
 	var lcfg = config.AppConfig{}
 	lcfg = readSettings(a, configurationFile)
-
-	a := app.New()
-	w := a.NewWindow("goLibreFollower " + config.Version)
-	a.Settings().SetTheme(theme.DarkTheme())
-	a.SetIcon(config.AppIcon)
 
 	glucosePanel := canvas.NewText("0", config.DefaultColor)
 	glucosePanel.TextSize = lcfg.TextSize
@@ -123,13 +122,13 @@ func setSettings(configurationFile string, a fyne.App) {
 	regionInput := widget.NewEntry()
 	regionInput.SetPlaceHolder("Region - default: de")
 
-	textSizeLabel := widget.NewLabel("Text Size:")
+	textSizeLabel := widget.NewLabel("Text Size - default: 100")
 	textSizeInput := widget.NewEntry()
 	textSizeInput.SetPlaceHolder("Text Size")
 
 	refreshIntervalLabel := widget.NewLabel("Refresh Interval:")
 	refreshIntervalInput := widget.NewEntry()
-	refreshIntervalInput.SetPlaceHolder("Refresh Interfal - deafult: 10s")
+	refreshIntervalInput.SetPlaceHolder("Refresh Interfal - deafult: 30s")
 
 	buttonSave := widget.NewButton("Save", func() {
 		var lcfg = config.AppConfig{}
@@ -147,7 +146,7 @@ func setSettings(configurationFile string, a fyne.App) {
 			lcfg.TextSize = float32(ts)
 		}
 		if refreshIntervalInput.Text == "" {
-			lcfg.RefreshInterval = 10
+			lcfg.RefreshInterval = config.DefaultRefreshInterval
 		} else {
 			lcfg.RefreshInterval, _ = strconv.Atoi(refreshIntervalInput.Text)
 		}

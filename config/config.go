@@ -10,6 +10,8 @@ const Version = "1.0.0"
 const LowGlucose = 70
 const HighGlucose = 180
 const TimeoutInterval = 25 // after how many RefreshIntervals should we time out
+const DefaultRefreshInterval = 30
+
 var DefaultColor = color.RGBA{237, 231, 225, 255}
 var GreenColor = color.RGBA{0, 170, 0, 255}
 var RedColor = color.RGBA{255, 0, 0, 255}
