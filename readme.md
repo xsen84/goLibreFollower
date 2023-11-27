@@ -46,7 +46,7 @@ chmod +x goLibreFollower-MAC.app/Contents/MacOS/goLibreFollower
 </p>
 
 
-  5.    Text Size: how big the text/window will be. You can use samller size for smaller windows, or big ones if you want a bigger window. Play with the values and choose the one that fits.
+  5.    Text Size: how big the text/window will be. You can use samller size for smaller windows, or big ones if you want a bigger window. Play with the values and choose the one that fits. Default is 100.
   6.    Refresh Interval: how often the application will query the LibreLinkUP servers. Libre readings are uploaded every 60 seconds. Recomended value is 30-60 seconds. Don't set a value too low as you will overwhelm the server.
   7.    SAVE settings and restart application
        
