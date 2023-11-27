@@ -8,7 +8,7 @@ windows:
 	rm -rf ${APP}-WINDOWS.exe
 darwin:
 	env GOOS=darwin GOARCH=arm64 CGO_ENABLED=1 ~/go/bin/./fyne package -os darwin --icon ${ICON} --appVersion ${VERSION} --name ${APP}-MAC
-	zip ${APP}-MAC_${VERSION}.zip ${APP}-MAC.app
+	zip -r ${APP}-MAC_${VERSION}.zip ${APP}-MAC.app
 	rm -rf ${APP}-MAC.app
 clean:
 	rm -rf ${APP}-WINDOWS_${VERSION}.zip ${APP}-MAC_${VERSION}.zip

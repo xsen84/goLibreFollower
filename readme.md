@@ -22,8 +22,8 @@
 - extract/unzip zip archive. Assuming you are in `Downloads` open a terminal and run:
 ```
 cd ~/Downloads/
-xattr -cr goLibreFollower.app
-chmod +x goLibreFollower.app/Contents/MacOS/goLibreFollower
+xattr -cr goLibreFollower-MAC.app
+chmod +x goLibreFollower-MAC.app/Contents/MacOS/goLibreFollower
 ```
 - if the operating system is blocking the app, please allow an exception acording to this article : https://support.apple.com/en-en/guide/mac-help/mh40616/mac 
 - on first run the settings window will open. See [Settings](https://github.com/xsen84/goLibreFollower/edit/main/readme.md#settings) for how to configure the application.
