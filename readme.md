@@ -19,6 +19,7 @@
 
 
 ## Mac OSX
+- video guide: https://youtu.be/ZC8TOu6xwpY
 - download `goLibreFollower-MAC_[VERSION].zip` from here: https://github.com/xsen84/goLibreFollower/releases
 - extract/unzip zip archive. Assuming you are in `Downloads` open a terminal and run:
 ```
