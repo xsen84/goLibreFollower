@@ -46,6 +46,17 @@ chmod +x goLibreFollower-MAC.app/Contents/MacOS/goLibreFollower
   <img width="400" height="250" src="https://github.com/xsen84/goLibreFollower/blob/main/doc/llu-region.png">
 </p>
 
+Valid regions are:
+-  ae
+-  ap
+-  au
+-  ca
+-  de
+-  eu
+-  eu2
+-  fr
+-  jp
+-  us
 
   5.    Text Size: how big the text/window will be. You can use samller size for smaller windows, or big ones if you want a bigger window. Play with the values and choose the one that fits. Default is 100.
   6.    Refresh Interval: how often the application will query the LibreLinkUP servers. Libre readings are uploaded every 60 seconds. Recomended value is 30-60 seconds. Don't set a value too low as you will overwhelm the server.
