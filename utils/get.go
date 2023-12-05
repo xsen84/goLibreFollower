@@ -7,11 +7,11 @@ import (
 	"time"
 )
 
-func GetReadings(authToken string) (string, error) {
+func GetReadings(authToken string, region string) (string, error) {
 	client := &http.Client{}
 	client.Timeout = 10 * time.Second
 
-	getUrl := "https://api-de.libreview.io/llu/connections"
+	getUrl := "https://api-" + region + ".libreview.io/llu/connections"
 
 	req, err := http.NewRequest("GET", getUrl, nil)
 	if err != nil {

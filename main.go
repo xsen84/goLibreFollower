@@ -78,7 +78,7 @@ func main() {
 	if isAuthSuccessful {
 		statusPanel.Text = "Authentication successfull"
 		go func() {
-			connectAndGetData(authToken, lcfg.RefreshInterval, glucosePanel, diffPanel, lastReadingPanel, statusPanel)
+			connectAndGetData(authToken, lcfg.Region, lcfg.RefreshInterval, glucosePanel, diffPanel, lastReadingPanel, statusPanel)
 		}()
 	} else {
 		statusPanel.Text = authToken
@@ -196,7 +196,7 @@ func setSettings(configurationFile string, a fyne.App) {
 
 }
 
-func connectAndGetData(authToken string, refreshInterval int, glucosePanel *canvas.Text, diffPanel *canvas.Text, lastReadingPanel *canvas.Text, statusPanel *canvas.Text) {
+func connectAndGetData(authToken string, region string, refreshInterval int, glucosePanel *canvas.Text, diffPanel *canvas.Text, lastReadingPanel *canvas.Text, statusPanel *canvas.Text) {
 	oldGlucose := 0
 	oldTimeStamp := ""
 	lastDiff := 0
@@ -207,7 +207,7 @@ func connectAndGetData(authToken string, refreshInterval int, glucosePanel *canv
 		httpError := false
 		statusPanel.Color = config.DefaultColor
 		glucosePanel.Color = config.BlueColor
-		connResponseResult, err := utils.GetReadings(authToken)
+		connResponseResult, err := utils.GetReadings(authToken, region)
 		if err != nil {
 			statusPanel.Text = err.Error()
 			httpError = true
