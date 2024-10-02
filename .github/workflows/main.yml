@@ -1,0 +1,11 @@
+name: A simple CI
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+
+    steps:
+      run: make darwin
