@@ -8,4 +8,5 @@ jobs:
     runs-on: macOS-latest
 
     steps:
-      run: make darwin
+      - name: make
+        run: make darwin
