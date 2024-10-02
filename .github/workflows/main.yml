@@ -10,6 +10,11 @@ jobs:
     steps:
       - name: list
         run: ls -alh
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: list-again
+        run: ls -alh
       - name: make
         run: make darwin
+      
       
