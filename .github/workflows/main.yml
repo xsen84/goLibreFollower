@@ -8,8 +8,8 @@ jobs:
     runs-on: macOS-latest
 
     steps:
-      - name: list
-        run: ls -alh
+      - name: install fyne
+        run: brew instal fyne
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: list-again
