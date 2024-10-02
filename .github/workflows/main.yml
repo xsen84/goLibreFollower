@@ -1,7 +1,7 @@
 name: A simple CI
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
